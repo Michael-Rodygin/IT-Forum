@@ -13,7 +13,8 @@ Including another URLconf
     1. Import to include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
+from django.conf import settings
+from django.views.static import serve
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
@@ -60,4 +61,7 @@ urlpatterns = [
     path('boards/<int:pk>/topics/<int:topic_pk>/', views.PostListView.as_view(), name='topic_posts'),
 
     path('settings/account/', accounts_views.UserUpdateView.as_view(), name='my_account'),
+
+    path('media/<path:path>)', serve, {'document_root': settings.MEDIA_ROOT}),
+    path('static/<path:path>', serve, {'document_root': settings.STATIC_ROOT}),
 ]
