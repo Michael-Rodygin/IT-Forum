@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'https://stormy-river-70152.herokuapp.com',
-    '127.0.0.1'
+    '127.0.0.1',
+    '0.0.0.0',
 ]
 
 # Application definition
