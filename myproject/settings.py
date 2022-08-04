@@ -146,9 +146,9 @@ LOGIN_REDIRECT_URL = 'home'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOGIN_URL = 'login'
 
-if 'DATABASE_URL' in os.environ:
-    import dj_database_url
+# if 'DATABASE_URL' in os.environ:
+#     import dj_database_url
+#
+#     DATABASES = {'default': dj_database_url.config()}
 
-    DATABASES = {'default': dj_database_url.config()}
-
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
