@@ -151,4 +151,8 @@ if 'DATABASE_URL' in os.environ:
 
     DATABASES = {'default': dj_database_url.config()}
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://stormy-river-70152.herokuapp.com',
+]
+
 # django_heroku.settings(locals())
