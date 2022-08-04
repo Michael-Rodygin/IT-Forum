@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}IT Forum{% endblock %}</title>
+    {% block stylesheet %}
     <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
-
-    {% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/neumorphism-box.css'%}">
     <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
     {% endblock %}
 </head>
